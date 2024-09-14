@@ -1,1 +1,0 @@
-# grantjgwang.github.io
