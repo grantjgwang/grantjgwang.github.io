@@ -10,44 +10,68 @@
 <body>
   <main>
     <div class="main-content">
+        <!--
+        Navigation bar
+        -->
         <nav class="navi-bar">
             <ul>
-                <li>
-                    <button data-nav-link>About</button>
+                <li class="navbar-item">
+                    <button class="navbar-link  active" data-nav-link>About</button>
                 </li>
-                <li>
-                    <button data-nav-link>Resume</button>
+                <li class="navbar-item">
+                    <button class="navbar-link" data-nav-link>Resume</button>
                 </li>
-                <li>
-                    <button data-nav-link>Projects</button>
+                <li class="navbar-item">
+                    <button class="navbar-link" data-nav-link>Projects</button>
                 </li>
-                <li>
-                    <button data-nav-link>Contact</button>
+                <li class="navbar-item">
+                    <button class="navbar-link" data-nav-link>Contact</button>
                 </li>
             </ul>
         </nav>
-        <article class="about-page">
+        <!-- 
+        About Me page
+        -->
+        <article class="about active" data-page="about">
             <header>
                 <h1>
-                    This is about me
+                    About Me
                 </h1>
             </header>
         </article>
-        <article class="resume-page">
+        <!--
+        Resume page
+        -->
+        <article class="resume" data-page="resume">
             <header>
                 <h1>
-                    This is resume
+                    Education
+                </h1>
+                <h1>
+                    Leadership and Involvment
+                    <h2>
+                        placeholder
+                    </h2>
+                    <h2>
+                        something
+                    </h2>
                 </h1>
             </header>
         </article>
-        <article class="project-page">
+        <!--
+        Projects page
+        -->
+        <article class="projects" data-page="projects">
             <header>
                 <h1>
                     This is project
                 </h1>
             </header>
         </article>
-        <article class="contact">
+        <!--
+        Contact page
+        -->
+        <article class="contact" data-page="contact">
             <header>
                 <h1>
                     This is contact
