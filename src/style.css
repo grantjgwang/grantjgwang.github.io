@@ -147,7 +147,8 @@ main {
 }
 .contact-title {
   font-weight: bold;
-  color: var(--grey)
+  color: var(--grey);
+  margin-bottom: 0; 
 }
 .contact-link {
   text-decoration: none;
