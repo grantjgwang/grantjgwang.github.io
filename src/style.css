@@ -1,7 +1,224 @@
-article {
-    display: none;
+:root {
+  --blocks-dark-backgroun: rgb(51, 50, 50);
+  --smoky-black: hsl(0, 0%, 7%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsla(0, 0%, 76%, 0.631);
+  --button-selected-color: hsl(0, 91%, 59%);
 }
 
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html { 
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+body { 
+  background: var(--smoky-black);
+  color: var(--white);
+  line-height: 1.6;
+}
+article { display: none; }
 article.active {
-    display: block;
+  display: block;
+  animation: fade 0.5s ease backwards;
+}
+p {
+  margin-bottom: 16px; 
+}
+main {
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* 
+# Top nagivation bar
+*/
+.topbar {
+  position: fixed; 
+  top: 0; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  background-color: var(--blocks-dark-backgroun);
+  z-index: 1000;
+  width: 50%; 
+  padding: 10px 10px; 
+  margin: 10px 10px;
+  border-radius: 15px;
+}
+.navibar { 
+  border-radius: 20px 20px 0 0;
+  width: 80%; 
+  margin: 0 auto;
+  text-align: center; 
+}
+.navibar ul {
+  display: flex;
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0; 
+  justify-content: space-around;
+  align-items: center; 
+}
+.navibar li {
+  margin: 0 15px; 
+  text-align: center; 
+}
+.navibar button {
+  background-color: var(--blocks-dark-backgroun);
+  color: var(--white-1);
+  text-decoration: none; 
+  padding: 10px;
+  border-radius: 15px;
+  border: none;                 
+  cursor: pointer;               /* Pointer cursor on hover */
+  transition: color 0.3s ease;   /* Smooth color transition */
+  font-size: 20px;
+}
+.navibar button.selected {
+  color: var(--button-selected-color);
+}
+
+/* 
+# Main content 
+*/
+.main-content{
+  padding-top: 80px;
+  display: flex;
+  min-width: 800px;               /* Minimum width to avoid being too small */
+  margin: 0 auto;                 /* Centers the container horizontally */
+  width: 80%;
+  position: relative; 
+}
+
+/*
+  # Side Panel
+*/
+.side {
+  padding: 20px;
+  position: fixed;            
+  left: calc((100% - 80%) / 2);                    
+  top: 0;                       
+  padding-top: 100px;
+}
+.side-panel {
+  display: fixed;
+  border-radius: 15px;
+  background-color: var(--blocks-dark-backgroun);
+  padding: 20px;
+}
+.profile-img {
+  width: 200px;         
+  height: 200px;        
+  border-radius: 50%;   
+  object-fit: cover;    
+  border: 2px solid #000; 
+}
+.side-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.contacts-list {
+  font-size: 14px;
+  list-style-type: none;
+}
+.contact-item {
+  display: flex;         
+  gap: 20px;
+}
+.icon-box {
+  width: auto;
+}
+.contact-info {
+  text-align: left;
+}
+.contact-title {
+  font-weight: bold;
+  color: var(--grey)
+}
+.contact-link {
+  text-decoration: none;
+  color: var(--white);
+}
+.social-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+.social-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.social-link {
+  display: inline-block;
+  width: 20px;          
+  overflow: hidden;
+}
+.divider {
+  height: 1px;   
+  background-color: var(--white);
+  margin: 10px 0;        
+}
+
+/* 
+#Icons
+*/
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
+
+/*
+  #Contents
+*/
+.contents {
+  margin-left: 270px;             
+  padding: 20px;
+  text-align: center;                  
+  box-sizing: border-box;  
+}
+.contents article {
+  border-radius: 15px;
+  background-color:  var(--blocks-dark-backgroun);
+  text-align: left;
+  padding: 20px;
+}
+
+
+
+
+
+
+
+
+/* Toggle Button Styles */
+#toggle-mode {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  position: absolute; /* Position absolutely */
+  top: 10px; /* Position from top */
+  right: 10px; /* Position from right */
+}
+
+#toggle-mode:hover {
+  background-color: #777;
 }
