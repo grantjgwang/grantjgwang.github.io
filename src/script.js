@@ -2,6 +2,7 @@
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
+/* Page and subpage controller */
 for (let i = 0; i < navigationLinks.length; i++) {
     navigationLinks[i].addEventListener("click", function () {
         for (let i = 0; i < pages.length; i++) {
@@ -17,6 +18,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
     });
 }
 
+/* Menu navigator */
 const buttons = document.querySelectorAll("[data-nav-link");
 buttons.forEach(button => {
     button.addEventListener("click", function() {
@@ -25,6 +27,17 @@ buttons.forEach(button => {
     });
 });
 
+/* Expend profile card when in smaller windwo size */
+function expand(card) {
+    card.classList.toggle('profile--expanded');
+
+    // If card is not expanded after toggle, add 'unexpanded' class
+    if (!card.classList.contains('profile--expanded')) card.classList.toggle('profile--unexpanded');
+    // Else if card is expanded after toggle and still contains 'unexpanded' class, remove 'unexpanded'
+    else if (card.classList.contains('profile--expanded') && card.classList.contains('profile--unexpanded')) card.classList.toggle('profile--unexpanded');
+}
+
+/* Resume */
 
 
 const toggleButton = document.getElementById('toggle-mode');
@@ -44,3 +57,4 @@ toggleButton.addEventListener('click', () => {
 
 // Initialize with light mode
 body.classList.add('light-mode');
+
