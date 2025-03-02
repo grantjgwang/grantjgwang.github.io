@@ -85,6 +85,9 @@ main {
   transition: color 0.3s ease;   /* Smooth color transition */
   font-size: 20px;
 }
+.navibar button:hover {
+  color: var(--button-selected-color);
+}
 .navibar button.selected {
   color: var(--button-selected-color);
 }
