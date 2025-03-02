@@ -177,6 +177,7 @@ main {
   margin: 10px 0;        
 }
 
+
 /* 
 #Icons
 */
@@ -204,12 +205,39 @@ main {
   padding: 20px;
 }
 
+/* About Me */
+.interestContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.interestBox {
+  background-color: var(--grey);
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Resume */
 
 
-
-
-
-
+/* Project */
+.projectList {
+  width: 100%;
+  text-align: center;
+}
+.projectItem {
+  width: calc(100% / 6);
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid red;
+  text-align: center;
+  margin: 2%;
+  padding: 20px;
+}
+.projectItem:hover {
+  background-color: #777;
+}
 
 /* Toggle Button Styles */
 #toggle-mode {
